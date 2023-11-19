@@ -1,3 +1,4 @@
+-- if true then return {} end -- REMOVE THIS LINE TO ACTIVATE THIS FILE
 -- You can simply override any internal plugins using Lazy, here are some example operations:
 return {
   -- customize alpha options
@@ -25,6 +26,20 @@ return {
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
 
+      {
+        "L3MON4D3/LuaSnip",
+        config = function(plugin, opts)
+          -- include the default astronvim config that calls the setup call
+          -- require "plugins.configs.luasnip"(plugin, opts)
+          -- load snippets paths
+          require("luasnip.loaders.from_vscode").lazy_load {
+            -- this can be used if your configuration lives in ~/.config/nvim
+            -- if your configuration lives in ~/.config/astronvim, the full path
+            -- must be specified in the next line
+            paths = { "./lua/user/snippets" }
+          }
+        end,
+      },
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   -- {
   --   "L3MON4D3/LuaSnip",
