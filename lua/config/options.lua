@@ -13,7 +13,7 @@ vim.opt.pumblend = 10 -- Make builtin completion menus slightly transparent
 vim.opt.winblend = 10 -- Make floating windows slightly transparent
 vim.opt.listchars = "extends:…,precedes:…,nbsp:␣" -- Define which helper symbols to show
 vim.opt.list = true -- Show some helper symbols
-vim.g.mapleader = " " -- sets vim.g.mapleader
+vim.g.mapleader = "," -- sets vim.g.mapleader
 -- vim.g.localleader = "," -- 
 vim.g.inlay_hints_enabled = true
 -- vim.g.lsp_handlers_enabled = true
@@ -25,3 +25,4 @@ vim.g.inlay_hints_enabled = true
 -- vim.opt.wrap = false -- sets vim.opt.wrap
 
 -- vim.g.mapleader = " " -- sets vim.g.mapleader
+-- vim.g.icons_enabled = false -- disable icons in the UI (disable if no nerd font is available)

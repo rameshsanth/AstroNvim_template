@@ -1,4 +1,5 @@
 -- You can also add new plugins here as well using the lazy syntax:
+---@type LazySpec
 return {
   -- changes to astronvim included plugins
   { "better-escape.nvim", enabled = false },
@@ -219,13 +220,11 @@ return {
     opts = {},
   },
 }
--- return {
---   "andweeb/presence.nvim",
---   {
---     "ray-x/lsp_signature.nvim",
---     event = "BufRead",
---     config = function()
---       require("lsp_signature").setup()
---     end,
---   },
--- }
+  -- "andweeb/presence.nvim",
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "BufRead",
+  --   config = function()
+  --     require("lsp_signature").setup()
+  --   end,
+  -- },

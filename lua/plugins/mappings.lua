@@ -1,5 +1,7 @@
 -- AstroCore provides a central place to modify mappings set up as well as which-key menu titles
-local tabpre = "<leader><tab>"
+-- local tabpre = "<leader><tab>"
+-- AstroCore provides a central place to modify mappings set up as well as which-key menu titles
+---@type LazySpec
 return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
@@ -11,16 +13,16 @@ return {
 
         -- navigate buffer tabs with `H` and `L`
         -- L = {
-        --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+        --   function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
         --   desc = "Next buffer",
         -- },
         -- H = {
-        --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+        --   function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
         --   desc = "Previous buffer",
         -- },
 
         -- mappings seen under group name "Buffer"
-        ["<leader>bD"] = {
+        ["<Leader>bD"] = {
           function()
             require("astroui.status.heirline").buffer_picker(
               function(bufnr) require("astrocore.buffer").close(bufnr) end
@@ -30,7 +32,7 @@ return {
         },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
-        ["<leader>b"] = { desc = "Buffers" },
+        ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
       },
